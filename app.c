@@ -6,7 +6,7 @@
 int main(int argc, char *argv[]) {
    
    GtkBuilder *builder;
-   gtk_init(argc, &argv);
+   gtk_init(&argc, &argv);
    
    
    builder = gtk_builder_new();
@@ -18,7 +18,7 @@ int main(int argc, char *argv[]) {
    appLabel = GTK_LABEL(gtk_builder_get_object(builder, "MyLabel"));
    
    
-   gtk_object_connect_signals(builder, NULL);
+   gtk_builder_connect_signals(builder, NULL);
    g_object_unref(builder);
    
    
@@ -40,9 +40,8 @@ void exit_app ()
    
 }
 
-
-void button_clicked ()
+void button_clicked()
 {
     printf("Button clicked\n");
-    gtk_label_set_text(myLabel);
+    gtk_label_set_text(appLabel, "Hello programmers!");
 }

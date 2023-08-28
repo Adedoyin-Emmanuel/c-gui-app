@@ -16,8 +16,9 @@
           <object class="GtkLabel" id="MyLabel">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
+            <property name="label" translatable="yes">Building GUI's With C Lanauge</property>
             <attributes>
-              <attribute name="font-desc" value="Umpush Bold 11"/>
+              <attribute name="font-desc" value="Umpush Bold 20"/>
               <attribute name="style" value="normal"/>
               <attribute name="weight" value="bold"/>
             </attributes>
